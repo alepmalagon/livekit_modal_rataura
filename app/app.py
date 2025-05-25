@@ -37,6 +37,7 @@ image = modal.Image.debian_slim().pip_install(
     "livekit-plugins-google",
     "livekit-plugins-silero",
     "python-dotenv",
+    "pydantic==1.10.8",
 )
 
 # Define the agent class

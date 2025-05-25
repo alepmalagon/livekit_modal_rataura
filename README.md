@@ -34,11 +34,17 @@ To run this project, you'll need:
 
 ## Running the Agent
 
-To run the agent:
+To run the agent, use one of the following commands:
 
 ```bash
-modal run app/app.py
+# Using python to run the script
+python -m app.app
+
+# Or using the Modal CLI
+modal app.app
 ```
+
+> **Note:** Do not use `modal run app/app.py` as it may not work with the current Modal CLI version.
 
 ## How It Works
 
