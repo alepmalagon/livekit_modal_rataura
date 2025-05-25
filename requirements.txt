@@ -1,0 +1,6 @@
+modal
+python-dotenv
+livekit-agents>=1.0.0
+livekit-plugins-google
+livekit-plugins-silero
+
