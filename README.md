@@ -32,19 +32,31 @@ To run this project, you'll need:
    modal setup
    ```
 
-## Running the Agent
+4. Add your secrets to Modal:
+   ```bash
+   modal secret create livekit-secrets LIVEKIT_URL=your_livekit_url LIVEKIT_API_KEY=your_livekit_api_key LIVEKIT_API_SECRET=your_livekit_api_secret
+   modal secret create google-secrets GOOGLE_API_KEY=your_google_api_key
+   ```
 
-To run the agent, use one of the following commands:
+## Deploying the Agent
+
+To deploy the agent to Modal:
 
 ```bash
-# Using python to run the script
-python -m app.app
-
-# Or using the Modal CLI
-modal app.app
+# Deploy the agent to Modal
+modal deploy app/app.py
 ```
 
-> **Note:** Do not use `modal run app/app.py` as it may not work with the current Modal CLI version.
+This will deploy your LiveKit agent as a worker in Modal's cloud environment. The worker will connect to your LiveKit server and wait for participants to join.
+
+## Running Locally for Testing
+
+For local testing without deploying to Modal:
+
+```bash
+# Run the local example
+python app/local_example.py
+```
 
 ## How It Works
 
@@ -54,3 +66,10 @@ This project uses:
 - Google's Gemini RealtimeModel for natural, human-like voice conversations
 
 The agent connects to a LiveKit room, waits for participants to join, and then engages in conversation using the Gemini RealtimeModel.
+
+## Testing Your Agent
+
+1. Deploy your agent to Modal
+2. Go to the LiveKit dashboard > Sandbox > Voice assistant
+3. Use the LiveKit frontend sandbox to test your agent
+4. Your agent will automatically connect to the sandbox using your LiveKit URL
