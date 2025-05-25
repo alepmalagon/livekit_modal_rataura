@@ -1,6 +1,7 @@
 modal
-python-dotenv
-livekit-agents>=1.0.0
-livekit-plugins-google
-livekit-plugins-silero
-
+python-dotenv==1.1.0
+livekit-agents==1.0.22
+livekit-plugins-google==1.0.22
+livekit-plugins-silero==1.0.22
+# Pin pydantic to a version compatible with FastAPI
+pydantic==1.10.8

@@ -17,6 +17,8 @@ To run this project, you'll need:
    pip install -r requirements.txt
    ```
 
+   > **Note:** The requirements.txt file pins specific versions to avoid dependency conflicts. In particular, we use pydantic 1.10.8 to ensure compatibility with FastAPI.
+
 2. Set up your environment variables in a `.env` file:
    ```
    LIVEKIT_URL=your_livekit_url
@@ -46,4 +48,3 @@ This project uses:
 - Google's Gemini RealtimeModel for natural, human-like voice conversations
 
 The agent connects to a LiveKit room, waits for participants to join, and then engages in conversation using the Gemini RealtimeModel.
-
