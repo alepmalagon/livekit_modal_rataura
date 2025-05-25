@@ -17,7 +17,7 @@ To run this project, you'll need:
    pip install -r requirements.txt
    ```
 
-   > **Note:** The requirements.txt file pins specific versions to avoid dependency conflicts. In particular, we use pydantic 1.10.8 to ensure compatibility with FastAPI.
+   > **Note:** The requirements.txt file specifies pydantic 2.x as required by LiveKit Agents 1.0.
 
 2. Set up your environment variables in a `.env` file:
    ```

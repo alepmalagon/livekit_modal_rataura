@@ -3,5 +3,5 @@ python-dotenv==1.1.0
 livekit-agents==1.0.22
 livekit-plugins-google==1.0.22
 livekit-plugins-silero==1.0.22
-# Pin pydantic to a version compatible with FastAPI
-pydantic==1.10.8
+# Use pydantic 2.x as required by livekit-agents
+pydantic>=2.0.0,<3.0.0
