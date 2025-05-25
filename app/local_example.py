@@ -14,7 +14,7 @@ from livekit.agents import (
 from livekit.agents.llm import function_tool
 from livekit.agents.voice import MetricsCollectedEvent
 from livekit.plugins import silero
-from livekit.plugins.google import RealtimeModel
+from livekit.plugins.google.beta.realtime import RealtimeModel
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
 # Load environment variables
@@ -119,4 +119,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
